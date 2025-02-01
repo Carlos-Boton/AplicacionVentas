@@ -4,11 +4,12 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
 $host = '34.170.3.102'; // Dirección IP pública de Google Cloud SQL
+$port = '3306';         // Puerto por defecto para MySQL
 $db = 'Distribuidor';
 $user = 'Tidis';
 $pass = 'Cdsp-0317fbyG';
 
-$dsn = "mysql:host=$host;dbname=$db;charset=utf8mb4";
+$dsn = "mysql:host=$host;port=$port;dbname=$db;charset=utf8mb4";
 try {
     $options = array(
         PDO::ATTR_TIMEOUT => 30, // Establece el tiempo de espera en segundos
@@ -18,5 +19,4 @@ try {
 } catch (PDOException $e) {
     echo 'Error: ' . $e->getMessage();
 }
-
 ?>
