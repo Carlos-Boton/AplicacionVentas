@@ -5,6 +5,8 @@ CREATE TABLE `usuario` (
     PRIMARY KEY (`idUser`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+INSERT INTO `usuario` (`idUser`, `usuario`, `password`) VALUES (NULL, 'Tiger', 'a79d43e66f755b370bb6ebe851b83ec35485c1ea5ca8830df94646e28aa13e29');
+
 CREATE TABLE `categoria` (
     `idcategoria` int NOT NULL AUTO_INCREMENT,
     `nombre` varchar(50) NOT NULL,
