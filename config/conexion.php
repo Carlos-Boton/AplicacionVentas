@@ -11,7 +11,7 @@ $pass = 'Cdsp-0317fbyG';
 $dsn = "mysql:host=$host;dbname=$db;charset=utf8mb4";
 try {
     $options = array(
-        PDO::ATTR_TIMEOUT => 10, // Establece el tiempo de espera en segundos
+        PDO::ATTR_TIMEOUT => 30, // Establece el tiempo de espera en segundos
     );
     $pdo = new PDO($dsn, $user, $pass, $options);
     echo "Conexión exitosa!";
