@@ -1,23 +1,20 @@
 <?php 
 //ip de la pc servidor base de datos
-define("DB_HOST", "34.170.3.102");
-
-define("DB_PORT", "3306");
+define("DB_HOST", "localhost");
 
 // nombre de la base de datos
-define("DB_NAME", "Distribuidor");
-
+define("DB_NAME", "crud");
 
 //nombre de usuario de base de datos
-define("DB_USERNAME", "Tidis");
+define("DB_USERNAME", "root");
 
 //conraseña del usuario de base de datos
-define("DB_PASSWORD", "Cdsp-0317fbyG");
+define("DB_PASSWORD", "");
 
 //codificacion de caracteres
 define("DB_ENCODE", "utf8");
 
 //nombre del proyecto
-define("PRO_NOMBRE", "TiendaOnline");
+define("PRO_NOMBRE", "Online");
  
  ?>
