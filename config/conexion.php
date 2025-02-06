@@ -5,6 +5,8 @@ $conexion=new mysqli(DB_HOST,DB_USERNAME,DB_PASSWORD,DB_NAME);
 
 if ($conexion->connect_error) {
     die("Falló en la conexión con la base de datos: " . $conexion->connect_error);
+} else {
+    echo "Conexión exitosa";
 }
 
 if (!function_exists('ejecutarConsulta')) {
