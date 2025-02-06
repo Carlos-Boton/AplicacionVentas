@@ -3,16 +3,12 @@ require_once "global.php";
 
 $conexion=new mysqli(DB_HOST,DB_USERNAME,DB_PASSWORD,DB_NAME,DB_PORT);
 
-if ($conexion->connect_error) {
-    die("Falló en la conexión con la base de datos: " . $conexion->connect_error);
-} else {
-    echo "Conexión exitosa";
-}
+mysqli_query($conexion, 'SET NAMES "'.DB_ENCODE.'"');
 
-// Establecer el conjunto de caracteres
-if (!$conexion->set_charset("utf8")) {
-    printf("Error cargando el conjunto de caracteres utf8: %s\n", $conexion->error);
-    exit();
+//muestra posible error en la conexion
+if (mysqli_connect_errno()) {
+	printf("Falló en la conexion con la base de datos: %s\n",mysqli_connect_error());
+	exit();
 }
 
 if (!function_exists('ejecutarConsulta')) {
