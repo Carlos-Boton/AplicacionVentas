@@ -1,15 +1,15 @@
 <?php 
 //ip de la pc servidor base de datos
-define("DB_HOST", "localhost");
+define("DB_HOST", "34.56.159.226");
 
 // nombre de la base de datos
-define("DB_NAME", "crud");
+define("DB_NAME", "distribuidor");
 
 //nombre de usuario de base de datos
-define("DB_USERNAME", "root");
+define("DB_USERNAME", "distri");
 
 //conraseña del usuario de base de datos
-define("DB_PASSWORD", "");
+define("DB_PASSWORD", "Cdsp-0317fbyG");
 
 //codificacion de caracteres
 define("DB_ENCODE", "utf8");
