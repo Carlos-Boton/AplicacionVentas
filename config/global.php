@@ -8,6 +8,9 @@ define("DB_NAME", "distribuidor");
 //nombre de usuario de base de datos
 define("DB_USERNAME", "distri");
 
+//puerto de la base de datos
+define("DB_PORT", "3306");
+
 //conraseña del usuario de base de datos
 define("DB_PASSWORD", "Cdsp-0317fbyG");
 
