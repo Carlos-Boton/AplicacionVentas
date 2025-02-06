@@ -6,9 +6,11 @@ $conexion=new mysqli(DB_HOST,DB_USERNAME,DB_PASSWORD,DB_NAME);
 mysqli_query($conexion, 'SET NAMES "'.DB_ENCODE.'"');
 
 //muestra posible error en la conexion
-if (mysqli_connect_errno()) {
-	printf("Falló en la conexion con la base de datos: %s\n",mysqli_connect_error());
-	exit();
+try {
+    $db = new PDO("mysql:host=$db_host;dbname=$db_name;charset=utf8", $db_user, $db_password);
+    echo "Conexión exitosa";
+} catch (PDOException $e) {
+    echo 'Conexión fallida: ' . $e->getMessage();
 }
 
 if (!function_exists('ejecutarConsulta')) {
